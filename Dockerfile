@@ -8,4 +8,5 @@ RUN npm run build
 
 FROM nginx
 ENV NGINX_CONTENT_DIR=/usr/share/nginx/html
+EXPOSE 80
 COPY --from=builder /app/build $NGINX_CONTENT_DIR
